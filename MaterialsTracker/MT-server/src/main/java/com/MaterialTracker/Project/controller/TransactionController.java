@@ -4,7 +4,7 @@ import com.MaterialTracker.Project.dao.JdbcTransactionDao;
 import com.MaterialTracker.Project.dao.UserDao;
 import com.MaterialTracker.Project.model.Transaction;
 import com.MaterialTracker.Project.model.User;
-import com.MaterialsTracker.tenmo.model.*;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
