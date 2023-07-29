@@ -15,8 +15,8 @@
       <option value="glass">Glass</option>
       <option value="hardware">Hardware</option>
     </select>
+    <button v-on:click="addNewDeposit">Add Deposit</button>
 
-    <!-- You can add a button or any other functionality as needed -->
   </div>
 </template>
 
@@ -27,8 +27,50 @@ export default {
       fullName: '',
       date: '',
       donor: '',
-      materialType: 'wood', // Default value, change as needed
+      materialType: 'wood', 
     };
   },
+  methods: {
+    addNewDeposit(){
+      const newDeposit = {
+        fullName: this.fullName,
+        date: this.date,
+        donor: this.donor,
+        materialType: this.materialType,
+      };
+      this.$store.dispatch('addDeposit', newDeposit)
+
+      this.fullName = '';
+      this.date = '';
+      this.donor = '';
+      this.materialType = 'wood';
+    }
+  }
 };
+
 </script>
+
+<style>
+div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+}
+</style>

@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <the-header />
     <deposit-form/>
   </div>
 </template>
 
 <script>
 import DepositForm from './components/DepositForm.vue'
+import TheHeader from './components/TheHeader.vue'
+
 
 export default {
   name: 'App',
   components: {
-    DepositForm
+    DepositForm,
+    TheHeader
   }
 }
 </script>
