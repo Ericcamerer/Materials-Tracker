@@ -8,11 +8,11 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.techelevator</groupId>
-    <artifactId>m02-capstone-server</artifactId>
+    <groupId>com.materialstracker</groupId>
+    <artifactId>materials-tracker-server</artifactId>
     <version>1.0</version>
-    <name>tenmo</name>
-    <description>TE Bucks Payment System</description>
+    <name>materialsTracker</name>
+    <description>Tracks materials</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

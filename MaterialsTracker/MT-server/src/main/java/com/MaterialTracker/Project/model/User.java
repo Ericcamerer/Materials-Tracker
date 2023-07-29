@@ -11,6 +11,7 @@ public class User {
 
    private int id;
    private String username;
+   private String fullname;
    @JsonIgnore // prevent from being sent to client
    private String password;
    @JsonIgnore
@@ -19,15 +20,24 @@ public class User {
    private int balance;
    private Set<Authority> authorities = new HashSet<>();
 
-   public User() { }
-
-   public User(int id, String username, String password, String authorities, int balance) {
+   public User() {}
+   public User(int id, String username, String fullname, String password, String authorities, int balance) {
       this.id = id;
       this.username = username;
+      this.fullname = fullname;
       this.password = password;
       this.balance = balance;
       if(authorities != null) this.setAuthorities(authorities);
       this.activated = true;
+   }
+
+
+   public String getFullname() {
+      return fullname;
+   }
+
+   public void setFullname(String fullname) {
+      this.fullname = fullname;
    }
 
    public double getBalance() {
@@ -93,13 +103,14 @@ public class User {
       return id == user.id &&
               activated == user.activated &&
               Objects.equals(username, user.username) &&
+              Objects.equals(fullname, user.fullname) &&
               Objects.equals(password, user.password) &&
               Objects.equals(authorities, user.authorities);
    }
 
    @Override
    public int hashCode() {
-      return Objects.hash(id, username, password, activated, authorities);
+      return Objects.hash(id, username, password, fullname, activated, authorities);
    }
 
    @Override
@@ -108,6 +119,7 @@ public class User {
               "id=" + id +
               ", username='" + username + '\'' +
               ", activated=" + activated +
+              ", fullname=" + fullname +
               ", authorities=" + authorities +
               ", balance=" + balance +
               '}';

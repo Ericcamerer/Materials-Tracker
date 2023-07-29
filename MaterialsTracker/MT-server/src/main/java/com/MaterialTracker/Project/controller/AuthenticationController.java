@@ -56,7 +56,7 @@ public class AuthenticationController {
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void register(@Valid @RequestBody RegisterUserDto newUser) {
-        if (!userDao.create(newUser.getUsername(), newUser.getPassword())) {
+        if (!userDao.create(newUser.getUsername(), newUser.getPassword(), newUser.getFullname())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User registration failed.");
         }
     }
