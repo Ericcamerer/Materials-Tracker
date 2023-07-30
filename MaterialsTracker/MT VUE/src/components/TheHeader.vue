@@ -15,12 +15,12 @@ export default {
 header {
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
-    padding: 20px;
-    background-color: rgba(34, 139, 34, 0.5);
+    margin-bottom: 5px;
+    
+    background-color: #507DBC;
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 100%;
 }
 </style>
