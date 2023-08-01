@@ -6,7 +6,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import TheHeader from '@/components/TheHeader.vue'
 import LoginForm from '@/components/LoginForm.vue'
 

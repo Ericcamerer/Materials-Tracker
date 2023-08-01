@@ -49,7 +49,7 @@ export default {
         woodType: this.woodType,
       };
       this.$store.dispatch('addDeposit', newDeposit)
-
+       alert("Deposit Logged!");
       this.fullName = '';
       this.date = '';
       this.donor = '';
