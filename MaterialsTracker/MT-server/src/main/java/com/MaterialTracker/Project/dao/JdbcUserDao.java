@@ -91,7 +91,7 @@ public class JdbcUserDao implements UserDao {
 
     @Override
     public User getBalanceByUserId(int id) {
-        String sql = "SELECT user_id, username, password_hash, balance FROM mt_user WHERE user_id = ?;";
+        String sql = "SELECT user_id, username, password_hash FROM mt_user WHERE user_id = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, id);
         if (rowSet.next()) {
 
@@ -102,7 +102,7 @@ public class JdbcUserDao implements UserDao {
     public List <User> getUsers(){
 
         List <User> users = new ArrayList<>();
-        String sql = "SELECT user_id, username, password_hash, FROM mt_user;";
+        String sql = "SELECT user_id, username, password_hash, fullname FROM mt_user;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
 
         while (rowSet.next()){
@@ -116,7 +116,6 @@ public class JdbcUserDao implements UserDao {
 
     private User mapRowToUser(SqlRowSet rs) {
         User user = new User();
-
         user.setId(rs.getInt("user_id"));
         user.setUsername(rs.getString("username"));
         user.setFullname(rs.getString("fullname"));

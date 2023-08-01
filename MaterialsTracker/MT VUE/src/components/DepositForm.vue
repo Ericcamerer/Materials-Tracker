@@ -1,6 +1,7 @@
 <template>
   <div>
-    <form action="">
+    <form>
+      <h2>Donation Details</h2>
     <label for="full-name">Full Name:</label>
     <input type="text" id="full-name" v-model="fullName" />
 
