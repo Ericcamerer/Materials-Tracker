@@ -3,7 +3,7 @@
       <img class = "header-image" src="https://st3.depositphotos.com/10480338/15642/v/600/depositphotos_156426560-stock-illustration-mt-business-vector-logo-design.jpg" alt="MT Logo">
       <h1>Materials Tracker</h1>
       <nav>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Deposit</router-link> |
       <router-link to="/login">Login</router-link>
     </nav>
   </header>
@@ -39,6 +39,6 @@ header {
 }
 nav {
   font-size: 20px;
-  margin-left: 70%;
+  margin-left: 65%;
 }
 </style>

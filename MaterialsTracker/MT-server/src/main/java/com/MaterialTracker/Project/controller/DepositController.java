@@ -44,8 +44,8 @@ public class DepositController {
 
     }
 
-    @RequestMapping(path = "/transactions/{id}", method = RequestMethod.GET)
-    public Deposit getTransactionById(Principal principal, @PathVariable int id){
+    @RequestMapping(path = "/deposits/{id}", method = RequestMethod.GET)
+    public Deposit getDepositById(Principal principal, @PathVariable int id){
         User userFrom = userDao.findByUsername(principal.getName());
         int userId = userFrom.getId();
         Deposit deposit = jdbcDepositDao.getSpecificDeposit(id, userId);
